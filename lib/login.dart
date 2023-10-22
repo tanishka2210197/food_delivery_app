@@ -1,4 +1,7 @@
+
+
 import 'package:flutter/material.dart';
+import 'package:food_deleivery_app/sigin.dart';
 import 'welcome.dart';
 
 class Login extends StatefulWidget {
@@ -9,62 +12,79 @@ class Login extends StatefulWidget {
 
 class LoginState extends State<Login> {
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     // height: 50,
-     //    width: 50,
-     //    decoration: const BoxDecoration(
-     //        image: DecorationImage(
-     //          image: AssetImage("assets/background.jpg"),
-     //          fit: BoxFit.cover,
-     //        )
-     //    ),
 
-            backgroundColor:Colors.red[100],
+
+            backgroundColor:Colors.green[100],
 
             appBar: AppBar(
                 backgroundColor: Colors.teal,
-                // AppBar.preferredHeightFor(context, 50 as Size),
-                title: Text('DAWAT' )),
-            // toolbarHeight: 100,
+                toolbarHeight: 100,
+                leading: Icon(Icons.food_bank,size:50.0,),
+                actions: [
+            Padding(padding: const EdgeInsets.all(15.0)),],
+
+         title: Text('DAWAT' ,style: TextStyle(fontSize: 40,)), ),
+
             body:
-            Center( child:
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset("assets/dawat2.jpg"),
-                SizedBox(height: 30,),
-                Text("Welcome,Foodies !!",style: TextStyle(fontSize: 30,),),
-                SizedBox(height: 40,),
-                Text("New Here ?, Sigin to continue",),
-                Container(
-                  height: 60,
-                width: 300,
-                child: ElevatedButton(onPressed: () {}, child: Text("SIGN IN")), ),
-                SizedBox(height: 30,),
+            // Container(
+            //     decoration: const BoxDecoration(
+            //         gradient: LinearGradient(colors:[
+            //    Colors.red,
+            //           Colors.blue,
+            //         ] )
+            //
+            //     )
+            //
+            // ),
 
+             Center( child:
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Padding(padding: padding)
+                  Image.asset("assets/logo.jpg",),
+                  SizedBox(height: 30,),
+                  Text("Welcome,Foodies !!",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.red ),),
+                  SizedBox(height: 40,),
+                  Text("New Here ?, Sigin to continue",style:TextStyle(fontSize: 20),),
+                  Container(
+                    height: 60,
+                  width: 300,
+                  child: ElevatedButton(onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => Signin() ) );
+                  }, child: Text("SIGN IN")), ),
+                  SizedBox(height: 30,),
 
+                         Text("Already a Customer? ,Login"),
+                   Container(
+                     height: 60,
+                     width: 300,
+                     child: ElevatedButton(onPressed: () {
+                       Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => Welcome() ) );
+                       }, child: Text("Login")),
+                   ),
+                  SizedBox(height: 30,),
+                  Container(
+                    height: 60,
+                      width: 300,
+                      child: ElevatedButton(onPressed: () {}, child: Text("Continue with Google"))),
+     ],
 
-                       Text("Already a Customer? ,Login"),
-                 ElevatedButton(onPressed: () {
-                   // Navigator.pushNamed(context, MaterialPageRoute(
-                   //    builder: (context) => Welcome() ) );
-                   }, child: Text("Login")),
-                SizedBox(height: 30,),
-                ElevatedButton(onPressed: () {}, child: Text("Continue with Google")),
+              )
 
-
-               
-
-              ], )
-            ),
+              ),
     );
 
 
 
   }  }
+
+
+
 
 

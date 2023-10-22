@@ -60,13 +60,22 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-assets:
-  - assets/a.jpeg
-  - assets/b.jpeg
-  - assets/c.jpg
-  - assets/dawat2.jpg
-  - assets/Dawat-New-Logo-s.png
-  - assets/background.jpg
+  assets:
+   - assets/dawat2.jpg
+   - assets/Dawat-New-Logo-s.png
+   - assets/background.jpg
+   - assets/biryani.jpeg
+   - assets/burger.jpg
+   - assets/chole_bathure.jpg
+   - assets/coffee.jpeg
+   - assets/dosa.jpg
+   - assets/pastry.jpg
+   - assets/noodles.jpg
+   - assets/momos.jpg
+   - assets/image.webp
+   - assets/logo.jpg
+
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
