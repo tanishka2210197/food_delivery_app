@@ -14,9 +14,9 @@ class _SigninState extends State<Signin> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.green[100],
       appBar:AppBar(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.teal,
         leading: IconButton(icon: Icon(Icons.arrow_back_ios_new_outlined,color: Colors.white),onPressed:() {
           Navigator.push(context, MaterialPageRoute(
               builder: (context) => Login() ) );
@@ -30,7 +30,7 @@ class _SigninState extends State<Signin> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text("SIGN IN",style:TextStyle(
-              color: Colors.white,fontWeight: FontWeight.bold,fontSize: 60,),),
+              color: Colors.black87,fontWeight: FontWeight.bold,fontSize: 60,),),
             Column(
               children: [
                 textField(
@@ -46,8 +46,8 @@ class _SigninState extends State<Signin> {
               ],
             ),
             Container(
-              width:400,
               height:70,
+              width: 300,
               child: ElevatedButton(
 
                   style: ElevatedButton.styleFrom(
@@ -67,7 +67,7 @@ class _SigninState extends State<Signin> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children : [
 
-                  Text( " You are just one step away",style: TextStyle(fontSize: 25,color:Colors.white),),
+                  Text( " You are just one step away",style: TextStyle(fontSize: 25,color:Colors.black),),
                 ] )
           ],
 
@@ -83,8 +83,8 @@ class _SigninState extends State<Signin> {
       decoration: InputDecoration(
 
           hintText: hintText,
-          prefixIcon: Icon(Icons.person,color: Colors.white,),
-          hintStyle: TextStyle(color: Colors.white,),
+          prefixIcon: Icon(Icons.person,color: Colors.black,),
+          hintStyle: TextStyle(color: Colors.black,),
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: Colors.black),
             // borderRadius:BorderRadius()

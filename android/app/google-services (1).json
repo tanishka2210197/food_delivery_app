@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "73282641845",
+    "project_id": "tanishka-da7c4",
+    "storage_bucket": "tanishka-da7c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73282641845:android:e2e9c1356bcaff393c83fc",
+        "android_client_info": {
+          "package_name": "com.tanishka.food_deleivery_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWMS-JoBUB-pN6G9JLSPcSsJO9Tjm0hBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

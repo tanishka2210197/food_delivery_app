@@ -17,16 +17,16 @@ class LoginState extends State<Login> {
     return Scaffold(
 
 
-            backgroundColor:Colors.green[100],
+            backgroundColor:Colors.green[50],
 
             appBar: AppBar(
                 backgroundColor: Colors.teal,
-                toolbarHeight: 100,
+                toolbarHeight: 80,
                 leading: Icon(Icons.food_bank,size:50.0,),
                 actions: [
             Padding(padding: const EdgeInsets.all(15.0)),],
 
-         title: Text('DAWAT' ,style: TextStyle(fontSize: 40,)), ),
+         title: Text('Dawat' ,style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)), ),
 
             body:
             // Container(
@@ -44,41 +44,53 @@ class LoginState extends State<Login> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Padding(padding: padding)
-                  Image.asset("assets/logo.jpg",),
-                  SizedBox(height: 30,),
-                  Text("Welcome,Foodies !!",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.red ),),
+                   // Padding(padding: const EdgeInsets.symmetric(),
+
+                  Image.asset("assets/image1.jpeg",),
+                  SizedBox(height: 30),
+                  Text("Welcome,Foodies !!",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.black ,fontFamily: 'Raleway-Regular'),),
                   SizedBox(height: 40,),
                   Text("New Here ?, Sigin to continue",style:TextStyle(fontSize: 20),),
                   Container(
                     height: 60,
                   width: 300,
-                  child: ElevatedButton(onPressed: () {
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.green[200],
+                      shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(30)),),
+
+                      onPressed: () {
+
                     Navigator.push(context, MaterialPageRoute(
                         builder: (context) => Signin() ) );
-                  }, child: Text("SIGN IN")), ),
-                  SizedBox(height: 30,),
+                  }, child: const Text("SIGN IN",style: TextStyle(fontSize: 28), ), ),),
+                     SizedBox(height: 35,),
 
-                         Text("Already a Customer? ,Login"),
+                         Text("Already a Customer? ,Login",style: TextStyle(fontSize: 20),),
                    Container(
                      height: 60,
                      width: 300,
-                     child: ElevatedButton(onPressed: () {
+                     child: ElevatedButton(
+                         style: ElevatedButton.styleFrom(
+                           backgroundColor: Colors.green[200], shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(30)),
+                         ),
+                         onPressed: () {
+
                        Navigator.push(context, MaterialPageRoute(
                           builder: (context) => Welcome() ) );
-                       }, child: Text("Login")),
+                       }, child: Text("LOGIN",style: TextStyle(fontSize: 28),)),
                    ),
-                  SizedBox(height: 30,),
-                  Container(
-                    height: 60,
-                      width: 300,
-                      child: ElevatedButton(onPressed: () {}, child: Text("Continue with Google"))),
-     ],
+     //              SizedBox(height: 30,),
+     //              Container(
+     //                height: 60,
+     //                  width: 300,
+     //                  child: ElevatedButton(onPressed: () {}, child: Text("Continue with Google"))),
 
+
+              ]
               )
-
               ),
-    );
+             ) ;
 
 
 
